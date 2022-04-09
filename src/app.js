@@ -20,17 +20,17 @@ app.get("", (req, res) => {
   });
 });
 
-app.get("/about", (req, res) => {
-  res.render("about", {
-    Title: "About",
-  });
-});
+// app.get("/about", (req, res) => {
+//   res.render("about", {
+//     Title: "About",
+//   });
+// });
 
-app.get("/about/*", (req, res) => {
-  res.render("Error", {
-    Data: "Nothing about found",
-  });
-});
+// app.get("/about/*", (req, res) => {
+//   res.render("Error", {
+//     Data: "Nothing about found",
+//   });
+// });
 
 app.get("/Search", (req, res) => {
   if (!req.query.address) return res.send("Please provide an Address");
