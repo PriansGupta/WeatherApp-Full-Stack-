@@ -8,6 +8,7 @@ const app = express();
 
 const partialsPath = path.join(__dirname, "../public/templates/partials");
 
+
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "../public/templates/views"));
 hbs.registerPartials(partialsPath);

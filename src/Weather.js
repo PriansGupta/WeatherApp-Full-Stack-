@@ -13,11 +13,13 @@ const weather = (address, callback) => {
     else {
       const Temperature = response.body.current.temperature;
       const description = response.body.current.weather_descriptions[0];
+      const Wspeed = response.body.current.wind_degree;
 
       callback(undefined, {
         Place:address.Place,
         Temperature: Temperature,
         Weather: description,
+        WindSpeed:Wspeed,
       });
     }
   });

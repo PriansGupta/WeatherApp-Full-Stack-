@@ -25,6 +25,8 @@ const form = document.querySelector(".icon");
 const Search = document.querySelector(".search");
 const city = document.querySelector(".cityname");
 const temp = document.querySelector(".temperature");
+const weather = document.querySelector(".weather");
+const speed = document.querySelector(".windspeed");
 
 form.addEventListener("click", (e) => {
   console.log(Search.value);
@@ -38,7 +40,10 @@ form.addEventListener("click", (e) => {
           if (data.error || data.message) {
             temp.textContent = "N/A";
             city.textContent = data.message;
+            weather.textContent = "N/A";
           } else {
+            speed.textContent=data.WindSpeed
+            weather.textContent = data.Weather;
             city.textContent = location;
             temp.textContent = data.Temperature;
             console.log(data.Temperature);
@@ -49,5 +54,6 @@ form.addEventListener("click", (e) => {
   } else {
     city.textContent = "Enter a location";
     temp.textContent = "N/A";
+    weather.textContent = "N/A";
   }
 });
