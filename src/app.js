@@ -21,11 +21,6 @@ app.get("", (req, res) => {
   });
 });
 
-// app.get("/about", (req, res) => {
-//   res.render("about", {
-//     Title: "About",
-//   });
-// });
 
 // app.get("/about/*", (req, res) => {
 //   res.render("Error", {
