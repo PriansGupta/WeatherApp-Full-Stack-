@@ -1,0 +1,374 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    outline: none;
+}
+
+/* .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+
+.box{
+    position: relative;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+span{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border-radius: 50%;
+    animation: paytm 0.6s linear infinite alternate;
+    transform: scale(0);
+    background: #002B73;
+}
+span:nth-child(1)
+{
+    animation-delay: .1s;
+}
+span:nth-child(2)
+{
+    animation-delay: .2s;
+}
+span:nth-child(3)
+{
+    animation-delay: .3s;
+}
+span:nth-child(4)
+{
+    animation-delay: .4s;
+    background: #00B9F5;
+}
+span:nth-child(5)
+{
+    animation-delay: .5s;
+    background: #00B9F5;
+}
+
+@keyframes paytm{
+    100%{
+        transform: scale(1);
+    }
+}  */
+
+.back{
+    z-index: 10;
+    position: fixed;
+}
+.sunclou{
+    z-index: 20;
+    position: relative;
+    left: 10cm;
+}
+.searchbar{
+    z-index: 20;
+    position: relative;
+    width: 385px;
+    height: 45px;
+    border: 4px solid white;
+    padding: 0px 10px;
+    margin-left: 10%;
+    border-radius: 50px;
+}
+.elements{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.search{
+    border: none;
+    height: 100%;
+    width: 120%;
+    padding: 0px 5px;
+    border-radius: 50px;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    background:transparent;
+    text-transform: uppercase;
+}
+
+.iconse{
+    color: white;
+    font-size: 25px;
+    margin-top: 8px;
+}
+.display{
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+    height: 500px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.06);
+    position: relative;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 20px 20px 22px rgba(0,0,0,0,2);
+    margin-top: 1%;
+    margin-left: 10%;
+    border-radius: 10px;
+    font-family: 'poppins',sans-serif;
+    overflow: hidden;
+}
+.temperature{
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin-top: 20px;
+    /* border: 2px solid white; */
+    font-size: 55px;
+}
+.cityname{
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    margin-top: 20px;
+    text-transform: uppercase;
+    /* border: 2px solid white;  */
+}
+.weather{
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin-top: 20px;
+    /* border: 2px solid white; */
+    
+}
+.weatherimg{
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    margin-top: 52px;
+}
+.sun{
+    width: 172px;
+    /* border: 2px solid white; */
+    position: absolute;
+    margin-top: -32px;
+    animation: rotatesun 10s  infinite;
+}
+@keyframes rotatesun {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+
+    }
+    
+}
+.cloud1{
+    width: 150px;
+    /* border: 2px solid white; */
+    position: relative;
+    right: -12%;
+    animation: sliding1 4s infinite ease-in-out;
+}
+.cloud2{
+    width: 150px;
+    /* border: 2px solid white; */
+    position: absolute;
+    left: 15%;
+    animation: sliding2 4s infinite ease-in-out;
+
+}
+@keyframes sliding1 {
+    0%{
+        right: -12%;
+    }
+    50%{
+        right: -9%;
+    }
+    100%{
+        right: -12%;
+    }
+}
+@keyframes sliding2 {
+    0%{
+        left: 15%;
+    }
+    50%{
+        left: 18%;
+    }
+    100%{
+        left: 15%;
+    }
+}
+.rain{
+    display: flex;
+    position: absolute;
+    width: 99%;
+    height: 61%;
+    background: url('photos/rain.png');
+    background-size: 100%;
+    background-repeat: repeat-y;
+    background-position: center;
+    margin-top: 45%;
+    overflow: hidden;
+    animation:  raining 0.2s linear infinite ;
+    /* border: 2px solid white; */
+}
+@keyframes raining {
+    0%{
+        background-position:center;
+    }
+    100%{
+        background-position: 0px 100px;
+
+    }
+    /* 100%{
+        background-position: center;
+    } */
+}
+.watch {
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 20%;
+    margin-right: 5%;
+    font-family: 'poppins',sans-serif;
+
+}
+.mainbody{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 20;
+    /* border: 2px solid white; */
+    justify-content: space-between;
+    margin-top: 1%;
+}
+.time{
+    letter-spacing: 5px;
+    color: white;
+    font-size: 80px;
+    font-weight: bolder;
+
+}
+.date{
+    letter-spacing: 5px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+.day{
+    letter-spacing: 5px;
+    color: white;
+    font-size: 30px;
+    font-weight:normal;
+}
+.Mausam{
+    position: relative;
+    z-index: 20; 
+    padding: 1%;
+    /* border: 2px solid white; */
+    width: fit-content;
+    text-align: center;
+    margin-left: 40%;
+    transform: translateY(20px);
+    display: flex;
+    flex-direction: row;
+}
+.head{
+    font-size: 3em;
+    color: white;
+    /* font-family: 'Great Vibes', cursive; */
+    letter-spacing: 6px;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    z-index: 21;
+}
+.weatherdetails{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid white; */
+    height: fit-content;
+    width: 40%;
+    justify-content: start;
+}
+.logo{
+    width: 100px;
+    position: absolute;
+    z-index:  20;
+    margin-left: 20%;
+    transform: translateY(-10px);
+}
+.replacement2{
+    display: flex;
+    /* border: 2px solid white;  */
+    flex-direction: column;
+}
+.humwind{
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid white;  */
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+.humidity{
+    color: white;
+    font-family: 'poppins',sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.windspeed{
+    color: white;
+    font-family: 'poppins',sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 20px;
+}
+.line{
+    border: 3px solid white;
+    width: 0px;
+    height: 40px;
+    background-color: white;
+}
+.wind{
+    display: flex;
+    flex-direction: column;
+}
+.humid{
+    display: flex;
+    flex-direction: column;
+}
+.watcha{
+    display: none;
+}
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+/* input:-webkit-autofill:focus,  */
+/* input:-webkit-autofill:active
+{ */
+ /* -webkit-box-shadow: url('PHOTOS/NIGHT.jpg');
+} */ 
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+} */

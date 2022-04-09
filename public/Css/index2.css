@@ -1,0 +1,695 @@
+@media  all  and (min-width:200px) and (max-width:299px) and (orientation: landscape)
+{
+    .mainbody {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1%;
+        width: 100%;
+    }
+    .head {
+        font-size: 2.5em;
+        text-align: center;
+    }
+    .Mausam {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* text-align: center; */
+        margin-left: 15%;
+        transform: translateY(20px);
+    }
+    .searchbar {
+        width: 91%;
+        height: 31px;
+        margin-left: 0%;
+    }
+    .weatherdetails {
+        width: 91%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 45px;
+    }
+    .iconse {
+        font-size: 22px;
+        margin-top: 5px;
+        outline: none;
+    }
+    .search {
+        height: 100%;
+        width: 120%;
+        font-size: 13px;
+    }
+    .display {
+        height: 500px;
+        width: 256px;
+        margin-top: 1%;
+        margin-left: 0%;
+    }
+    .watch{
+        display: none;
+    }
+    .time{
+        font-size: 80px;
+        font-weight: bolder;
+    
+    }
+    .date{
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .day{
+        font-size: 30px;
+        font-weight:normal;
+    }
+    .watcha{
+        display: flex;
+        flex-direction: row;
+        border: 2px solid white;
+    }
+    .windspeed {
+        text-align: center;
+        font-size: 15px;
+    }
+    .humidity{
+        font-size: 15px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+    
+.line {
+    width: 0px;
+    height: 21px;
+}
+.temperature {
+    text-align: center;
+    letter-spacing: 5px;
+    margin-top: 20px;
+    /* border: 2px solid white; */
+    font-size: 48px;
+}
+.rain {
+    width: 129%;
+    margin-top: 69%;
+}
+.cloud1 {
+    width: 150px;
+    /* border: 2px solid white; */
+    right: -18%;
+    animation: sliding1 4s infinite ease-in-out;
+}
+.cloud2 {
+    width: 150px;
+    /* border: 2px solid white; */
+    left: 6%;
+    animation: sliding2 4s infinite ease-in-out;
+}
+@keyframes sliding1 {
+    0%{
+        right: -18%;
+    }
+    50%{
+        right: -15%;
+    }
+    100%{
+        right: -18%;
+    }
+}
+@keyframes sliding2 {
+    0%{
+        left: 6%;
+    }
+    50%{
+        left: 9%;
+    }
+    100%{
+        left: 6%;
+    }
+}
+}
+
+@media  all  and (min-width:300px) and (max-width:400px)and (orientation: landscape)
+{
+    .watch {
+        /* border: 2px solid white; */
+        display: none;
+    }
+    .head {
+        font-size: 3em;
+        text-align: center;
+        position: relative;
+       
+    }
+    .Mausam {
+        /* border: 2px solid white; */
+        width: fit-content;
+        text-align: center;
+        margin-left: 14%;
+        transform: translateY(20px);
+    }
+    .mainbody {
+        display: flex;
+        /* border: 2px solid white; */
+        justify-content: center;
+        align-items: center;
+        margin-top: 11%;
+        /* margin-right: 60%; */
+        width: 100%;
+    }
+    .weatherdetails {
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid white; */
+        height: fit-content;
+        width: 94%;
+        justify-content: start;
+    }
+    .display {
+        display: flex;
+        height: 444px;
+        width: 100%;
+        margin-top: 1%;
+        margin-left: 0%;
+    }
+    .searchbar {
+        width: 91%;
+        height: 36px;
+        margin-left: 2%;
+        border-radius: 50px;
+    }
+    .temperature {
+        margin-top: 2px;
+        /* border: 2px solid white; */
+        font-size: 55px;
+    }
+    .iconse {
+        font-size: 25px;
+        margin-top: 6px;
+        outline: none;
+    }
+    .cloud1 {
+        width: 150px;
+        /* border: 2px solid white; */
+        right: -18%;
+        animation: sliding1 4s infinite ease-in-out;
+    }
+    .cloud2 {
+        width: 150px;
+        /* border: 2px solid white; */
+        position: absolute;
+        left: 6%;
+        animation: sliding2 4s infinite ease-in-out;
+    }
+    @keyframes sliding1 {
+        0%{
+            right: -18%;
+        }
+        50%{
+            right: -15%;
+        }
+        100%{
+            right: -18%;
+        }
+    }
+    @keyframes sliding2 {
+        0%{
+            left: 6%;
+        }
+        50%{
+            left: 9%;
+        }
+        100%{
+            left: 6%;
+        }
+    }
+}
+@media  all  and (min-width:401px) and (max-width:500px)and (orientation: landscape)
+{
+    .watch {
+        /* border: 2px solid white; */
+        display: none;
+        width: fit-content;
+        height: fit-content;
+        margin-top: 20%;
+        margin-right: 5%;
+    }
+    .head {
+        font-size: 3em;
+        text-align: center;
+        z-index: 21;
+    }
+    .Mausam {
+        /* border: 2px solid white; */
+        width: fit-content;
+        text-align: center;
+        margin-left: 14%;
+        transform: translateY(20px);
+        display: flex;
+        flex-direction: row;
+    }
+    .mainbody {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        z-index: 20;
+        /* border: 2px solid white; */
+        justify-content: center;
+        align-items: center;
+        margin-top: 11%;
+        /* margin-right: 0%; */
+        width: 100%;
+    }
+    .display {
+        display: flex;
+        height: 502px;
+        width: 91%;;
+        margin-top: 1%;
+        margin-left: 0%;
+        border-radius: 10px;
+    }
+    .weatherdetails {
+       
+        justify-content: center;
+        align-items: center;
+    }
+    .searchbar {
+        width: 91%;
+        height: 36px;
+        margin-left: 0%;
+        border-radius: 50px;
+    }
+    .iconse {
+        font-size: 25px;
+        margin-top: 6px;
+    }
+    .cloud1 {
+        width: 150px;
+        /* border: 2px solid white; */
+        right: -18%;
+        animation: sliding1 4s infinite ease-in-out;
+    }
+    .cloud2 {
+        width: 150px;
+        /* border: 2px solid white; */
+        left: 6%;
+        animation: sliding2 4s infinite ease-in-out;
+    }
+    @keyframes sliding1 {
+        0%{
+            right: -12%;
+        }
+        50%{
+            right: -9%;
+        }
+        100%{
+            right: -12%;
+        }
+    }
+    @keyframes sliding2 {
+        0%{
+            left: 16%;
+        }
+        50%{
+            left: 19%;
+        }
+        100%{
+            left: 16%;
+        }
+    }
+}
+
+@media  all  and (min-width:601px) and (max-width:700px)and (orientation: landscape)
+{
+    .Mausam {
+        /* border: 2px solid white; */
+        width: 100%;
+        text-align: center;
+        margin-left: 0%;
+        transform: translateY(20px);
+        display: flex;
+        flex-direction: row;
+    }
+    .head{
+        left: 4%;
+    }
+    .watch{
+        display: flex;
+    }
+    .time {
+        letter-spacing: 5px;
+        color: white;
+        font-size: 40px;
+        font-weight: bolder;
+    }
+    .mainbody {
+        display: flex;
+        /* border: 2px solid white; */
+        justify-content: space-between;
+        align-items: self-start;
+        margin-top: 10%;
+    }
+    .date {
+        letter-spacing: 5px;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .day {
+        letter-spacing: 5px;
+        color: white;
+        font-size: 20px;
+        font-weight: normal;
+    }
+    .weatherdetails {
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid white; */
+        height: fit-content;
+        width: 65%;
+        justify-content: start;
+    }
+    
+    .display {
+        display: flex;
+        height: 500px;
+        width: 90%;
+        margin-top: 1%;
+        margin-left: 5%;
+        border-radius: 10px;
+    }
+    .searchbar {
+    width: 85%;
+    height: 45px;
+    margin-left: 5%;
+    border-radius: 50px;
+}
+.cloud1 {
+    width: 150px;
+    /* border: 2px solid white; */
+    right: -21%;
+    animation: sliding1 4s infinite ease-in-out;
+}
+.cloud2 {
+    width: 150px;
+    /* border: 2px solid white; */
+    left: 15%;
+    animation: sliding2 4s infinite ease-in-out;
+}
+@keyframes sliding1 {
+    0%{
+        right: -18%;
+    }
+    50%{
+        right: -15%;
+    }
+    100%{
+        right: -18%;
+    }
+}
+@keyframes sliding2 {
+    0%{
+        left: 15%;
+    }
+    50%{
+        left: 18%;
+    }
+    100%{
+        left: 15%;
+    }
+}
+.rain {
+    width: 100%;
+    margin-top: 47%;
+}
+}
+@media  all  and (min-width:701px) and (max-width:800px)and (orientation: landscape)
+{
+    .Mausam {
+        /* border: 2px solid white; */
+        width: 100%;
+        text-align: center;
+        margin-left: 0%;
+        transform: translateY(20px);
+        display: flex;
+        flex-direction: row;
+    }
+    .head{
+        left: 4%;
+    }
+    .watch{
+        display: flex;
+        right: -4%;
+    }
+    .time {
+        font-size: 63px;
+        font-weight: bolder;
+    }
+    .date {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .day {
+        font-size: 37px;
+        font-weight: normal;
+    }
+    .mainbody {
+        display: flex;
+        /* border: 2px solid white; */
+        justify-content: space-between;
+        margin-top: 4%;
+    }
+    .display {
+        display: flex;
+        height: 500px;
+        width: 90%;
+        margin-top: 1%;
+        margin-left: 5%;
+        border-radius: 10px;
+    }
+    .searchbar {
+    width: 85%;
+    height: 45px;
+    margin-left: 5%;
+    border-radius: 50px;
+}
+.cloud1 {
+    width: 150px;
+    /* border: 2px solid white; */
+    right: -11%;
+    animation: sliding1 4s infinite ease-in-out;
+}
+.cloud2 {
+    width: 150px;
+    /* border: 2px solid white; */
+    left: 16%;
+    animation: sliding2 4s infinite ease-in-out;
+}
+@keyframes sliding1 {
+    0%{
+        right: -8%;
+    }
+    50%{
+        right: -5%;
+    }
+    100%{
+        right: -8%;
+    }
+}
+@keyframes sliding2 {
+    0%{
+        left: 16%;
+    }
+    50%{
+        left: 13%;
+    }
+    100%{
+        left: 16%;
+    }
+}
+.rain {
+    width: 100%;
+    margin-top: 47%;
+}
+}
+@media  all  and (min-width:801px) and (max-width:900px)and (orientation: landscape)
+{
+    .Mausam {
+        /* border: 2px solid white; */
+        width: 100%;
+        text-align: center;
+        margin-left: 0%;
+        transform: translateY(20px);
+        display: flex;
+        flex-direction: row;
+    }
+    .head{
+        left: 4%;
+    }
+    .watch{
+        display: flex;
+        right: -4%;
+    }
+    .time {
+        font-size: 63px;
+        font-weight: bolder;
+    }
+    .date {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .day {
+        font-size: 37px;
+        font-weight: normal;
+    }
+    .mainbody {
+        display: flex;
+        /* border: 2px solid white; */
+        justify-content: space-between;
+        margin-top: 4%;
+    }
+    .display {
+        display: flex;
+        height: 500px;
+        width: 90%;
+        margin-top: 1%;
+        margin-left: 5%;
+        border-radius: 10px;
+        font-family: 'poppins',sans-serif;
+        overflow: hidden;
+    }
+    .searchbar {
+    width: 85%;
+    height: 45px;
+    margin-left: 5%;
+    border-radius: 50px;
+}
+.cloud1 {
+    width: 150px;
+    /* border: 2px solid white; */
+    right: -11%;
+    animation: sliding1 4s infinite ease-in-out;
+}
+.cloud2 {
+    width: 150px;
+    /* border: 2px solid white; */
+    left: 19%;
+    animation: sliding2 4s infinite ease-in-out;
+}
+@keyframes sliding1 {
+    0%{
+        right: -8%;
+    }
+    50%{
+        right: -5%;
+    }
+    100%{
+        right: -8%;
+    }
+}
+@keyframes sliding2 {
+    0%{
+        left: 19%;
+    }
+    50%{
+        left: 22%;
+    }
+    100%{
+        left: 19%;
+    }
+}
+.rain {
+    width: 100%;
+    margin-top: 38%;
+}
+}
+@media  all  and (min-width:901px) and (max-width:1200px)and (orientation: landscape)
+{
+    .Mausam {
+        /* border: 2px solid white; */
+        width: 100%;
+        text-align: center;
+        margin-left: 0%;
+        transform: translateY(20px);
+        display: flex;
+        flex-direction: row;
+    }
+    .head{
+        left: 4%;
+    }
+    .watch{
+        display: flex;
+        right: -4%;
+    }
+    .time {
+        font-size: 63px;
+        font-weight: bolder;
+    }
+    .date {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .day {
+        font-size: 37px;
+        font-weight: normal;
+    }
+    .mainbody {
+        display: flex;
+        flex-direction: row;
+        /* border: 2px solid white; */
+        justify-content: space-between;
+        margin-top: 4%;
+    }
+    .display {
+        display: flex;
+        height: 500px;
+        width: 90%;
+        margin-top: 1%;
+        margin-left: 5%;
+        border-radius: 10px;
+    }
+    .searchbar {
+    width: 85%;
+    height: 45px;
+    margin-left: 5%;
+    border-radius: 50px;
+}
+.cloud1 {
+    width: 150px;
+    /* border: 2px solid white; */
+    right: -11%;
+    animation: sliding1 4s infinite ease-in-out;
+}
+.cloud2 {
+    width: 150px;
+    /* border: 2px solid white; */
+    left: 22%;
+    animation: sliding2 4s infinite ease-in-out;
+}
+@keyframes sliding1 {
+    0%{
+        right: -8%;
+    }
+    50%{
+        right: -5%;
+    }
+    100%{
+        right: -8%;
+    }
+}
+@keyframes sliding2 {
+    0%{
+        left: 30%;
+    }
+    50%{
+        left: 33%;
+    }
+    100%{
+        left: 30%;
+    }
+}
+.rain {
+    width: 100%;
+    margin-top: 30%;
+}
+}
