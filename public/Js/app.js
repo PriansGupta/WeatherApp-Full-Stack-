@@ -27,6 +27,7 @@ const city = document.querySelector(".cityname");
 const temp = document.querySelector(".temperature");
 const weather = document.querySelector(".weather");
 const speed = document.querySelector(".windspeed");
+const humidity= document.querySelector(".humidity");
 
 form.addEventListener("click", (e) => {
   console.log(Search.value);
@@ -42,10 +43,11 @@ form.addEventListener("click", (e) => {
             city.textContent = data.message;
             weather.textContent = "N/A";
           } else {
-            speed.textContent=data.WindSpeed
+            speed.textContent=data.WindSpeed+"m/s"
             weather.textContent = data.Weather;
             city.textContent = location;
             temp.textContent = data.Temperature;
+            humidity.textContent=data.Humidity+"%";
             console.log(data.Temperature);
           }
         });
@@ -56,4 +58,6 @@ form.addEventListener("click", (e) => {
     temp.textContent = "N/A";
     weather.textContent = "N/A";
   }
+  Search.value="";
+
 });

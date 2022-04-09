@@ -4,60 +4,6 @@
     outline: none;
 }
 
-/* .container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,50%);
-}
-
-.box{
-    position: relative;
-    width: 120px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-span{
-    display: block;
-    width: 20px;
-    height: 20px;
-    background: #000;
-    border-radius: 50%;
-    animation: paytm 0.6s linear infinite alternate;
-    transform: scale(0);
-    background: #002B73;
-}
-span:nth-child(1)
-{
-    animation-delay: .1s;
-}
-span:nth-child(2)
-{
-    animation-delay: .2s;
-}
-span:nth-child(3)
-{
-    animation-delay: .3s;
-}
-span:nth-child(4)
-{
-    animation-delay: .4s;
-    background: #00B9F5;
-}
-span:nth-child(5)
-{
-    animation-delay: .5s;
-    background: #00B9F5;
-}
-
-@keyframes paytm{
-    100%{
-        transform: scale(1);
-    }
-}  */
-
 .back{
     z-index: 10;
     position: fixed;
@@ -174,6 +120,7 @@ span:nth-child(5)
     text-align: center;
     font-size: 20px;
 }
+
 .weatherimg{
     /* border: 2px solid white; */
     display: flex;
@@ -353,6 +300,13 @@ span:nth-child(5)
     margin-top: 5%;
 }
 .humidity{
+    color: white;
+    font-family: 'poppins',sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.humidityTitle{
     color: white;
     font-family: 'poppins',sans-serif;
     font-size: 20px;
