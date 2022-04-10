@@ -89,8 +89,6 @@ function Clock() {
   secs = ("0" + secs).slice(-2);
 
   let value = hours + ":" + mins + ":" + secs + ":" + ampm;
-  console.log(value);
-
   time.textContent = value;
 
   let t = setTimeout(Clock, 500);
