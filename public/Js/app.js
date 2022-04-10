@@ -9,7 +9,6 @@ const findlocation = () => {
     fetch(geo)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         city.textContent = data.locality;
       });
   };
