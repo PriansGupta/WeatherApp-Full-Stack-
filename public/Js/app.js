@@ -33,8 +33,7 @@ const date = document.querySelector(".Date");
 const Day = document.querySelector(".Day");
 const background = document.querySelector(".background");
 
-Day.textContent="dwef";
-
+Day.textContent = "dwef";
 
 form.addEventListener("click", (e) => {
   console.log(Search.value);
@@ -73,9 +72,9 @@ function Clock() {
 
   let Format = rtClock.toString();
   let DateAndMonth = Format.substring(4, 15).toUpperCase();
-  let day=Format.substring(0, 3).toUpperCase();
+  let day = Format.substring(0, 3).toUpperCase();
   date.textContent = DateAndMonth;
-  Day.textContent=day;
+  Day.textContent = day;
 
   let hours = rtClock.getHours();
   let mins = rtClock.getMinutes();
@@ -93,7 +92,6 @@ function Clock() {
   console.log(value);
 
   time.textContent = value;
-
 
   let t = setTimeout(Clock, 500);
 }
