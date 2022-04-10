@@ -94,7 +94,6 @@ function Clock() {
 
   time.textContent = value;
 
-  console.log("nskani");
 
   let t = setTimeout(Clock, 500);
 }
