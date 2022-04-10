@@ -27,7 +27,8 @@ const city = document.querySelector(".cityname");
 const temp = document.querySelector(".temperature");
 const weather = document.querySelector(".weather");
 const speed = document.querySelector(".windspeed");
-const humidity= document.querySelector(".humidity");
+const humidity = document.querySelector(".humidity");
+const time = document.querySelector(".clock");
 
 form.addEventListener("click", (e) => {
   console.log(Search.value);
@@ -43,11 +44,11 @@ form.addEventListener("click", (e) => {
             city.textContent = data.message;
             weather.textContent = "N/A";
           } else {
-            speed.textContent=data.WindSpeed+"m/s"
+            speed.textContent = data.WindSpeed + "m/s";
             weather.textContent = data.Weather;
             city.textContent = location;
             temp.textContent = data.Temperature;
-            humidity.textContent=data.Humidity+"%";
+            humidity.textContent = data.Humidity + "%";
             console.log(data.Temperature);
           }
         });
@@ -58,6 +59,37 @@ form.addEventListener("click", (e) => {
     temp.textContent = "N/A";
     weather.textContent = "N/A";
   }
-  Search.value="";
-
+  Search.value = "";
 });
+
+function Clock() {
+  let rtClock = new Date();
+
+  let Format = rtClock.toString();
+  let DateAndMonth = Format.substring(0, 15);
+
+  console.log(DateAndMonth);
+
+  let hours = rtClock.getHours();
+  let mins = rtClock.getMinutes();
+  let secs = rtClock.getSeconds();
+
+  let ampm = hours < 12 ? "AM" : "PM";
+
+  hours = hours > 12 ? hours - 12 : hours;
+
+  hours = ("0" + hours).slice(-2);
+  mins = ("0" + mins).slice(-2);
+  secs = ("0" + secs).slice(-2);
+
+  let value = hours + ":" + mins + ":" + secs + ":" + ampm;
+  console.log(value);
+
+  time.textContent = value;
+
+  console.log("nskani");
+
+  let t = setTimeout(Clock, 500);
+}
+
+Clock();
