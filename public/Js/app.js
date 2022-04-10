@@ -29,6 +29,8 @@ const weather = document.querySelector(".weather");
 const speed = document.querySelector(".windspeed");
 const humidity = document.querySelector(".humidity");
 const time = document.querySelector(".clock");
+const date = document.querySelector(".Date");
+const Day = document.querySelector(".Day");
 
 form.addEventListener("click", (e) => {
   console.log(Search.value);
@@ -66,9 +68,11 @@ function Clock() {
   let rtClock = new Date();
 
   let Format = rtClock.toString();
-  let DateAndMonth = Format.substring(0, 15);
-
-  console.log(DateAndMonth);
+  let DateAndMonth = Format.substring(4, 15).toUpperCase();
+  let day=Format.substring(0, 3).toUpperCase();
+  date.textContent = DateAndMonth;
+  Day.textContent=day;
+  // console.log(day);
 
   let hours = rtClock.getHours();
   let mins = rtClock.getMinutes();

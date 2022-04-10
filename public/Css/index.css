@@ -126,13 +126,13 @@
   justify-content: center;
   width: 100%;
   height: fit-content;
-  margin-top: 52px;
+  margin-top: 10px;
 }
 .sun {
-  width: 172px;
+  width: 135px;
   /* border: 2px solid white; */
   position: absolute;
-  margin-top: -32px;
+  margin-top: -23px;
   animation: rotatesun 10s infinite;
 }
 @keyframes rotatesun {
@@ -231,13 +231,13 @@
   font-size: 60px;
   font-weight: bolder;
 }
-.date {
+.Date {
   letter-spacing: 5px;
   color: white;
   font-size: 40px;
   font-weight: bold;
 }
-.day {
+.Day {
   letter-spacing: 5px;
   color: white;
   font-size: 30px;
@@ -337,10 +337,10 @@ input:-webkit-autofill:hover,
 { */
 /* -webkit-box-shadow: url('PHOTOS/NIGHT.jpg');
 } */
-/* input:-webkit-autofill,
+input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
     -webkit-transition-delay: 9999s;
-} */
+}

@@ -737,7 +737,7 @@
     }
     .watch{
         display: flex;
-        right: -4%;
+        right: 0%;
     }
     .time {
         font-size: 63px;
@@ -760,7 +760,7 @@
     }
     .display {
         display: flex;
-        height: 500px;
+        height: 424px;
         width: 90%;
         margin-top: 1%;
         margin-left: 5%;
@@ -773,15 +773,15 @@
     border-radius: 50px;
 }
 .cloud1 {
-    width: 150px;
+    width: 135px;
     /* border: 2px solid white; */
     right: -11%;
     animation: sliding1 4s infinite ease-in-out;
 }
 .cloud2 {
-    width: 150px;
+    width: 135px;
     /* border: 2px solid white; */
-    left: 22%;
+    left: 6%;
     animation: sliding2 4s infinite ease-in-out;
 }
 @keyframes sliding1 {
