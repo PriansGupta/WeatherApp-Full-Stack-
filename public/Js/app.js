@@ -5,7 +5,7 @@ const findlocation = () => {
 
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
-    console.log(latitude, longitude);
+
     const geo = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
     fetch(geo)
       .then((res) => res.json())
