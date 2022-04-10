@@ -227,21 +227,21 @@
 }
 .clock {
   letter-spacing: 5px;
-  color: white;
+  color: rgb(46, 46, 46);
   font-size: 60px;
   font-weight: bolder;
 }
 .Date {
   letter-spacing: 5px;
-  color: white;
+  color: rgb(104, 104, 104);
   font-size: 40px;
   font-weight: bold;
 }
 .Day {
   letter-spacing: 5px;
-  color: white;
+  color: rgb(104, 104, 104);
   font-size: 30px;
-  font-weight: normal;
+  font-weight: 900;
 }
 .Mausam {
   position: relative;
@@ -330,17 +330,14 @@
 .watcha {
   display: none;
 }
-/* input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-/* input:-webkit-autofill:focus,  */
-/* input:-webkit-autofill:active
-{ */
-/* -webkit-box-shadow: url('PHOTOS/NIGHT.jpg');
-} */
+.city {
+  width: 80%;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
-    -webkit-transition-delay: 9999s;
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999s;
 }

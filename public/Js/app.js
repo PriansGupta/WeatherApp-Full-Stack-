@@ -31,6 +31,10 @@ const humidity = document.querySelector(".humidity");
 const time = document.querySelector(".clock");
 const date = document.querySelector(".Date");
 const Day = document.querySelector(".Day");
+const background = document.querySelector(".background");
+
+Day.textContent="dwef";
+
 
 form.addEventListener("click", (e) => {
   console.log(Search.value);
@@ -72,7 +76,7 @@ function Clock() {
   let day=Format.substring(0, 3).toUpperCase();
   date.textContent = DateAndMonth;
   Day.textContent=day;
-  // console.log(day);
+  console.log(day,DateAndMonth);
 
   let hours = rtClock.getHours();
   let mins = rtClock.getMinutes();
