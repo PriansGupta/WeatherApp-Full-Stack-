@@ -2,7 +2,6 @@ const findlocation = () => {
   const city = document.querySelector(".cityname");
 
   const success = (position) => {
-
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
 
