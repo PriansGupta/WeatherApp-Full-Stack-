@@ -2,7 +2,7 @@ const findlocation = () => {
   const city = document.querySelector(".cityname");
 
   const success = (position) => {
-    console.log(position);
+
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     console.log(latitude, longitude);
@@ -36,7 +36,6 @@ const background = document.querySelector(".background");
 Day.textContent = "dwef";
 
 form.addEventListener("click", (e) => {
-  console.log(Search.value);
   e.preventDefault();
   const location = Search.value;
 
