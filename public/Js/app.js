@@ -76,7 +76,6 @@ function Clock() {
   let day=Format.substring(0, 3).toUpperCase();
   date.textContent = DateAndMonth;
   Day.textContent=day;
-  console.log(day,DateAndMonth);
 
   let hours = rtClock.getHours();
   let mins = rtClock.getMinutes();
