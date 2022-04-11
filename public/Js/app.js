@@ -40,7 +40,7 @@ form.addEventListener("click", (e) => {
   const location = Search.value;
 
   if (location.length !== 0) {
-    fetch("http://localhost:3000/Search?address=" + location).then(
+    fetch("Search?address=" + location).then(
       (response) => {
         response.json().then((data) => {
           if (data.error || data.message) {

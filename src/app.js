@@ -5,6 +5,7 @@ const path = require("path");
 const hbs = require("hbs");
 
 const app = express();
+const port=process.env.PORT || 3000
 
 const partialsPath = path.join(__dirname, "../public/templates/partials");
 
@@ -42,6 +43,6 @@ app.get("/Search", (req, res) => {
 });
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
 
 });
