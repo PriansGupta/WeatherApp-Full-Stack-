@@ -184,7 +184,7 @@
   position: absolute;
   width: 99%;
   height: 100%;
-  background: url("../Images/RAIN.png");
+  /* background: url("../Images/RAIN.png"); */
   background-size: 100%;
   background-repeat: repeat-y;
   background-position: center;
