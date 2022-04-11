@@ -38,6 +38,11 @@ Day.textContent = "dwef";
 form.addEventListener("click", (e) => {
   e.preventDefault();
   const location = Search.value;
+  city.textContent = "Loading..."
+  temp.textContent = "...";
+  weather.textContent = "...";
+  humidity.textContent = "..."
+  speed.textContent = "...";
 
   if (location.length !== 0) {
     fetch("Search?address=" + location).then(
@@ -47,6 +52,9 @@ form.addEventListener("click", (e) => {
             temp.textContent = "N/A";
             city.textContent = data.message;
             weather.textContent = "N/A";
+            speed.textContent = "N/A";
+            humidity.textContent = "N/A";
+
           } else {
             speed.textContent = data.WindSpeed + "m/s";
             weather.textContent = data.Weather;
