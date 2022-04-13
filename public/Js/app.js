@@ -1,3 +1,5 @@
+const Search = document.querySelector(".search");
+
 const findlocation = () => {
   const city = document.querySelector(".cityname");
 
@@ -12,6 +14,7 @@ const findlocation = () => {
       .then((data) => {
 
         city.textContent = data.locality;
+        Search.value=data.locality
       });
   };
   const error = () => {
@@ -22,7 +25,6 @@ const findlocation = () => {
 setTimeout(findlocation, 100);
 
 const form = document.querySelector(".icon");
-const Search = document.querySelector(".search");
 const city = document.querySelector(".cityname");
 const temp = document.querySelector(".temperature");
 const weather = document.querySelector(".weather");
