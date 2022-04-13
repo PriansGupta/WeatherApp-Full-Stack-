@@ -1,29 +1,4 @@
 const Search = document.querySelector(".search");
-
-const findlocation = () => {
-  const city = document.querySelector(".cityname");
-
-  const success = (position) => {
-
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-
-    const geo = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
-    fetch(geo)
-      .then((res) => res.json())
-      .then((data) => {
-
-        city.textContent = data.locality;
-        Search.value=data.locality
-      });
-  };
-  const error = () => {
-    city.textContent = "N/A";
-  };
-  navigator.geolocation.getCurrentPosition(success, error);
-};
-setTimeout(findlocation, 100);
-
 const form = document.querySelector(".icon");
 const city = document.querySelector(".cityname");
 const temp = document.querySelector(".temperature");
@@ -35,46 +10,68 @@ const date = document.querySelector(".Date");
 const Day = document.querySelector(".Day");
 const background = document.querySelector(".background");
 
-Day.textContent = "dwef";
-
-form.addEventListener("click", (e) => {
-  e.preventDefault();
-  const location = Search.value;
-  city.textContent = "Loading..."
+const Weather = (location) => {
+  city.textContent = "Loading...";
   temp.textContent = "...";
   weather.textContent = "...";
-  humidity.textContent = "..."
+  humidity.textContent = "...";
   speed.textContent = "...";
 
   if (location.length !== 0) {
-    fetch("Search?address=" + location).then(
-      (response) => {
-        response.json().then((data) => {
-          if (data.error || data.message) {
-            temp.textContent = "N/A";
-            city.textContent = data.message;
-            weather.textContent = "N/A";
-            speed.textContent = "N/A";
-            humidity.textContent = "N/A";
-
-          } else {
-            speed.textContent = data.WindSpeed + "m/s";
-            weather.textContent = data.Weather;
-            city.textContent = location;
-            temp.textContent = data.Temperature;
-            humidity.textContent = data.Humidity + "%";
-            console.log(data.Temperature);
-          }
-        });
-      }
-    );
+    fetch("Search?address=" + location).then((response) => {
+      response.json().then((data) => {
+        if (data.error || data.message) {
+          temp.textContent = "N/A";
+          city.textContent = data.message;
+          weather.textContent = "N/A";
+          speed.textContent = "N/A";
+          humidity.textContent = "N/A";
+        } else {
+          speed.textContent = data.WindSpeed + "m/s";
+          weather.textContent = data.Weather;
+          city.textContent = location;
+          temp.textContent = data.Temperature;
+          humidity.textContent = data.Humidity + "%";
+          console.log(data.Temperature);
+        }
+      });
+    });
   } else {
     city.textContent = "Enter a location";
     temp.textContent = "N/A";
     weather.textContent = "N/A";
   }
   Search.value = "";
+};
+
+const findlocation = () => {
+  const city = document.querySelector(".cityname");
+
+  const success = (position) => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    const geo = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
+    fetch(geo)
+      .then((res) => res.json())
+      .then((data) => {
+        Weather(data.locality);
+        city.textContent=data.locality
+      });
+  };
+  const error = () => {
+    city.textContent = "N/A";
+  };
+  navigator.geolocation.getCurrentPosition(success, error);
+};
+setTimeout(findlocation, 100);
+
+form.addEventListener("click", (e) => {
+  e.preventDefault();
+  Weather(Search.value);
 });
+
+
 
 function Clock() {
   let rtClock = new Date();

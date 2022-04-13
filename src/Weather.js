@@ -1,14 +1,15 @@
 const request = require("request");
 
 const weather = (address, callback) => {
-  const url = "http://api.weatherstack.com/current?access_key=449b8cf20027e2f7ddf7c69940787eda&query="+address.lon+","+address.lat;
+  const url = "http://api.weatherstack.com/current?access_key=6b8c13b9f5a4d311ffbc74fd26622504&query="+address.lon+","+address.lat;
+
 
   request({ url: url, json: true }, (error, response) => {
-    if (error) callback({ message: "Unable to connect" }, undefined);
+    if (error) callback({ message: "" }, undefined);
     else if (response.body.error)
     {
       console.log(response.body.error)
-      callback({ message: "Unable to connect" }, undefined);
+      callback({ message: "" }, undefined);
     }
     else {
       const Temperature = response.body.current.temperature;

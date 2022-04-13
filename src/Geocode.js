@@ -5,7 +5,7 @@ const Geocode = (address, callback) => {
   const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?limit=1&access_token=pk.eyJ1IjoicHJpYW5zIiwiYSI6ImNsMGp4dWdwajBoMWkzZHVvM2IwenZkc3oifQ.jLETuenG2e14hTyin_oJCA`;
 
   request({ url: url, json: true }, (error, response) => {
-    if (error) callback({ message: "Unable to connect" }, undefined);
+    if (error) callback({ message: "" }, undefined);
     else if (response.body.features.length === 0)
       callback({ message: "Not found" }, undefined);
     else {
