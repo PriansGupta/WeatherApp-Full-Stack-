@@ -31,3 +31,4 @@ const weather = (address, callback) => {
 };
 
 module.exports = weather;
+
